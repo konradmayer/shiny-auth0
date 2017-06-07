@@ -12,7 +12,7 @@ var env = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/private-apps/login/');
+  res.redirect('/shiny-private/login/');
 });
 
 router.get('/login',
@@ -26,9 +26,9 @@ router.get('/logout', function(req, res){
 });
 
 router.get('/callback',
-  passport.authenticate('auth0', { failureRedirect: '/private-apps/login' }),
+  passport.authenticate('auth0', { failureRedirect: '/shiny-private/login' }),
   function(req, res) {
-    res.redirect(req.session.returnTo || '/private-apps/reports/');
+    res.redirect(req.session.returnTo || '/shiny-private/reports/');
   });
 
 
