@@ -12,7 +12,7 @@ var env = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/shiny-private/login/');
+  res.redirect('/shiny-private/reports/');
 });
 
 router.get('/login',
@@ -22,7 +22,7 @@ router.get('/login',
 
 router.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/login');
+  res.redirect('/shiny-private/login');
 });
 
 router.get('/callback',
